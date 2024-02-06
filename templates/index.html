@@ -1,0 +1,41 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concrete Strength Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <h1>Concrete Strength Prediction</h1>
+    <form action="/predict" method="post" id="form">
+        <label for="cement">Cement:</label>
+        <input type="number" name="cement" id="cement" step="0.01" required><br>
+
+        <label for="blast_furnace_slag">Blast Furnace Slag:</label>
+        <input type="number" name="blast_furnace_slag" id="blast_furnace_slag" step="0.01" required><br>
+
+        <label for="fly_ash">Fly Ash:</label>
+        <input type="number" name="fly_ash" id="fly_ash" step="0.01" required><br>
+
+        <label for="water">Water:</label>
+        <input type="number" name="water" id="water" step="0.01" required><br>
+
+        <label for="superplasticizer">Superplasticizer:</label>
+        <input type="number" name="superplasticizer" id="superplasticizer" step="0.01" required><br>
+
+        <label for="coarse_aggregate">Coarse Aggregate:</label>
+        <input type="number" name="coarse_aggregate" id="coarse_aggregate" step="0.01" required><br>
+
+        <label for="fine_aggregate">Fine Aggregate:</label>
+        <input type="number" name="fine_aggregate" id="fine_aggregate" step="0.01" required><br>
+
+        <label for="age">Age (in days):</label>
+        <input type="number" name="age" id="age" required><br>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
